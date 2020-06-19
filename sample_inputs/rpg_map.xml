@@ -1,0 +1,51 @@
+<tiles dir="./graphics/rpg_map/" size_x="15" size_y="10">
+
+  <!--grass tiles-->
+  <tile file="grass/grass_bottom.png" top="grass" right="grass_earth" bottom="earth" left="grass_earth"/>
+  <tile file="grass/grass_bottom_left.png" top="earth_grass" right="grass_earth" bottom="earth" left="earth"/>
+  <tile file="grass/grass_bottom_right.png" top="grass_earth" right="earth" bottom="earth" left="grass_earth"/>
+  <tile file="grass/grass_left.png" top="earth_grass" right="grass" bottom="earth_grass" left="earth"/>
+  <tile file="grass/grass_right.png" top="grass_earth" right="earth" bottom="grass_earth" left="grass"/>
+  <tile file="grass/grass_top.png" top="earth" right="earth_grass" bottom="grass" left="earth_grass"/>
+  <tile file="grass/grass_top_left.png" top="earth" right="earth_grass" bottom="earth_grass" left="earth"/>
+  <tile file="grass/grass_top_right.png" top="earth" right="earth" bottom="grass_earth" left="earth_grass"/>
+  
+  <!--common-->
+  <tile file="earth.png" top="earth" right="earth" bottom="earth" left="earth"/>
+  <tile file="earth_border_bottom_bottom.png" top="earth" right="earth_bottom_border" bottom="earth_bottom_border_ending1" left="earth_bottom_left_corner1"/>
+  <tile file="earth_border_left_bottom.png" top="earth" right="earth_bottom_right_corner2" bottom="earth_bottom_border_ending2" left="earth_bottom_border"/>
+  <tile file="earth_border_right_bottom.png" top="earth" right="earth_bottom_border" bottom="earth_bottom_border_ending3" left="earth_bottom_border"/>
+  <tile file="grass.png" top="grass" right="grass" bottom="grass" left="grass"/>
+  <tile file="sea.png" top="water" right="grass" bottom="water" left="water"/>
+
+  <!--grass earth hill tiles-->
+  <tile file="grass_earth_hill/grass_border_upper_left.png" top="grass" right="grass" bottom="grass_earth_middle_edge1" left="small_stones1"/>
+  <tile file="grass_earth_hill/grass_earth_border_bottom.png" top="grass" right="small_stones2" bottom="grass_earth_middle_edge2" left="grass"/>
+  <tile file="grass_earth_hill/grass_earth_bottom_bottom.png" top="earth_bottom_border_ending1" right="big_shadow" bottom="grass" left="big_shadow"/>
+  <tile file="grass_earth_hill/grass_earth_bottom_left.png" top="stones_left_border" right="earth" bottom="grass_earth_hill" left="grass"/>
+  <tile file="grass_earth_hill/grass_earth_bottom_left_bottom.png" top="grass_earth_hill" right="earth_bottom_left_corner1" bottom="unique1" left="grass"/>
+  <tile file="grass_earth_hill/grass_earth_bottom_left_bottom2.png" top="unique1" right="big_shadow" bottom="grass" left="grass"/>
+  <tile file="grass_earth_hill/grass_earth_bottom_right.png" top="stones_right_border" right="bottom_right_corner" bottom="earth_grass_hill" left="earth"/>
+  <tile file="grass_earth_hill/grass_earth_bottom_right_bottom.png" top="earth_grass_hill" right="grass" bottom="unique2" left="earth_bottom_border"/>
+  <tile file="grass_earth_hill/grass_earth_bottom_right_bottom2.png" top="unique2" right="grass" bottom="grass" left="big_shadow"/>
+  
+  <tile file="grass_earth_hill/grass_earth_left_bottom.png" top="earth_bottom_border_ending2" right="shadow_rocks2" bottom="grass" left="shadow__rocks1"/>
+  <tile file="grass_earth_hill/grass_earth_left_left_bottom.png" top="grass_earth_hill" right="earth_bottom_border" bottom="unique3" left="grass"/>
+  <tile file="grass_earth_hill/grass_earth_left_left_bottom2.png" top="unique3" right="medium_shadow" bottom="grass" left="grass"/>
+  <tile file="grass_earth_hill/grass_earth_left_left_upper.png" top="grass" right="middle_upper" bottom="grass_earth_hill" left="grass"/>
+  <tile file="grass_earth_hill/grass_earth_left_right_bottom.png" top="earth" right="earth" bottom="stones_left_border" left="earth_bottom_right_corner2"/>
+
+  <tile file="grass_earth_hill/grass_earth_left_upper_right.png" top="grass_earth_hill" right="earth" bottom="earth" left="earth_upper_border"/>
+  <tile file="grass_earth_hill/grass_earth_middle_upper.png" top="grass_earth_middle_edge2" right="earth_upper_border" bottom="earth" left="earth_upper_border"/>
+  <tile file="grass_earth_hill/grass_earth_right_bottom.png" top="earth_bottom_border_ending3" right="medium_shadow" bottom="grass" left="medium_shadow"/>
+  <tile file="grass_earth_hill/grass_earth_right_left_bottom.png" top="earth" right="earth_bottom_border" bottom="bottom_right_corner" left="earth"/>
+  <tile file="grass_earth_hill/grass_earth_right_right_bottom.png" top="earth_grass_hill" right="grass" bottom="unique4" left="earth_bottom_border"/>
+  <tile file="grass_earth_hill/grass_earth_right_right_bottom2.png" top="unique4" right="grass" bottom="grass" left="medium_shadow"/>
+  <tile file="grass_earth_hill/grass_earth_right_upper_left.png" top="earth_grass_hill" right="earth_upper_border" bottom="earth" left="earth"/>
+  <tile file="grass_earth_hill/grass_earth_right_upper_right.png" top="grass" right="grass" bottom="earth_grass_hill" left="earth_upper_border"/>
+  <tile file="grass_earth_hill/grass_earth_upper_left.png" top="grass_earth_hill" right="earth" bottom="grass_earth_hill" left="small_stones2"/>
+  <tile file="grass_earth_hill/grass_earth_upper_left_upper.png" top="grass" right="earth_upper_border" bottom="grass_earth_hill" left="grass"/>
+  <tile file="grass_earth_hill/grass_earth_upper_right.png" top="earth_grass_hill" right="grass" bottom="earth_grass_hill" left="earth"/>
+  <tile file="grass_earth_hill/grass_earth_upper_upper.png" top="grass" right="earth_upper_border" bottom="earth" left="earth_upper_border"/>
+
+</tiles>

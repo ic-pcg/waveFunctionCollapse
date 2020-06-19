@@ -1,0 +1,30 @@
+<tiles dir="./graphics/huxley_tiles/" size_x="10" size_y="10">
+
+  <tile file="sky.png" top="sky" right="sky" bottom="sky" left="sky"/>
+
+  <!-- huxley -->
+
+  <tile file="ground_level.png" top="grnd_top" right="grnd_side" bottom="pavement" left="grnd_side"/>
+  <tile file="doors.png" top="grnd_top" right="grnd_side" bottom="pavement" left="grnd_side"/>
+  <tile file="ground_level_window.png" top="grnd_top" right="grnd_side" bottom="pavement" left="grnd_side"/>
+  <tile file="telephone.png" top="grnd_top" right="grnd_side" bottom="pavement" left="grnd_side"/>
+  <tile file="ground_edge.png" top="grnd_edge" right="sky" bottom="pavement" left="grnd_side" flip="2"/>
+  <tile file="ground_to_upper.png" top="upper" right="grnd_to_upper" bottom="grnd_top" left="grnd_to_upper" flip="2"/>
+  <tile file="ground_to_upper_edge.png" top="upper_edge" right="sky" bottom="grnd_edge" left="grnd_to_upper" flip="2"/>
+  <tile file="roof_corner.png" top="sky" right="sky" bottom="upper_edge" left="roof" flip="2"/>
+  <tile file="roof.png" top="sky" right="roof" bottom="upper" left="roof"/>
+  <tile file="upper_edge.png" top="upper_edge" right="sky" bottom="upper_edge" left="upper" flip="2"/>
+  <tile file="window.png" top="upper" right="upper" bottom="upper" left="upper"/>
+  <!--
+  <tile file="roof_upwards.png" top="16" right="5" bottom="7" left="7" flip="2"/>
+  -->
+
+  <tile file="qtr_base.png" top="qtr" right="qtr_base" bottom="pavement" left="sky" flip="2"/>
+  <tile file="qtr_balcony.png" top="qtr" right="qtr_balcony" bottom="qtr" left="sky" flip="2"/>
+  <tile file="qtr_top_balcony.png" top="qtr_1" right="qtr_top_balcony" bottom="qtr" left="sky" flip="2"/>
+  <tile file="qtr_dome.png" top="qtr_2" right="qtr_dome" bottom="qtr_1" left="sky" flip="2"/>
+  <tile file="qtr_spire.png" top = "sky" right="qtr_spire" bottom ="qtr_2" left="sky" flip="2"/>
+
+  <constraint file="telephone.png" x="3" y ="9"/>
+  
+</tiles>

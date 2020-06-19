@@ -1,0 +1,18 @@
+<tiles dir="./graphics/python_tiles/" size_x = "10" size_y = "10">
+  <tile file="empty.png" top ="empty" right="empty" bottom="empty" left="empty" flip="2"/>
+  <!-- blue -->
+  <tile file="head_blue.png" top ="empty" right="empty" bottom="empty" left="blue" rotate="3"/>
+  <tile file="tail_blue.png" top ="empty" right="blue" bottom="empty" left="empty" rotate="3" flip="2"/>
+  <tile file="straight_blue.png" top ="empty" right="blue" bottom="empty" left="blue" rotate="1"/>
+  <tile file="turn_blue.png" top ="empty" right="blue" bottom="blue" left="empty" rotate="3"/>
+  <tile file="crossing_blue.png" top ="blue" right="blue" bottom="blue" left="blue" rotate="1"/>
+  <!-- yellow -->
+  <tile file="head_yellow.png" top ="empty" right="empty" bottom="empty" left="yellow" rotate="3" flip="2"/>
+  <tile file="tail_yellow.png" top ="empty" right="yellow" bottom="empty" left="empty" rotate="3" flip="2"/>
+  <tile file="straight_yellow.png" top ="empty" right="yellow" bottom="empty" left="yellow" rotate="1"/>
+  <tile file="turn_yellow.png" top ="empty" right="yellow" bottom="yellow" left="empty" rotate="3"/>
+  <tile file="crossing_yellow.png" top ="yellow" right="yellow" bottom="yellow" left="yellow" rotate="1"/>
+  <!-- mixed -->
+  <tile file="crossing_blue_yellow.png" top ="yellow" right="blue" bottom="yellow" left="blue" rotate="1"/>
+  <tile file="crossing_yellow_blue.png" top ="blue" right="yellow" bottom="blue" left="yellow" rotate="1"/>
+</tiles>
