@@ -1,7 +1,9 @@
 # waveFunctionCollapse
 Our implementation of [Maxim Gumin's wave function algorithm](https://github.com/mxgmn/WaveFunctionCollapse) in C
 
-<img src="wfc_demo.gif" width="600">
+<p align="center">
+  <img src="wfc_demo.gif" width="600">
+</p>
 
 Authors: [Łukasz Jakubowski](https://github.com/woocashh), [Maciej Kaszlewicz](https://github.com/NaraS91), [Paweł Kroll](https://github.com/skrroll), [Stefan Radziuk](https://github.com/stefanradziuk)
 
