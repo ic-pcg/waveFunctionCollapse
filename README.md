@@ -115,9 +115,9 @@ This is a subdirectory with png files of the same width and height (and all squa
 2. Initialise a 2D array of 64 bitstrings (each bit corresponding to a tile type). True represents that a tile can occupy given space, false - the opposite. We will want all of those to have exactly one-bit set. Without specified constraints, all bitstrings will be set to 11111...
 3. Loop:
 
-  i. Observation: Find elements of minimum entropy greater not equal to 1 (these spaces are already collapsed). If this is positive, go to the next step, otherwise, abort (a valid solution was not found).
+  3a. Observation: Find elements of minimum entropy greater not equal to 1 (these spaces are already collapsed). If this is positive, go to the next step, otherwise, abort (a valid solution was not found).
   
-  ii. Choose the element at random and collapse it (make its entropy 1).
+  3b. Choose the element at random and collapse it (make its entropy 1).
   
 4. If successfully terminated, we have a valid image generated. 
 
@@ -145,6 +145,12 @@ We can gladly provide you with expertise and cooperation!
 
 The official report is available [here](Report.pdf), please jump straight to section 3 for relevant information.
 
+## References
+
+* [Maxim Gumin's wave function algorithm](https://github.com/mxgmn/WaveFunctionCollapse)
+* [Isaac Karth and Adam M. Smith research paper](https://adamsmith.as/papers/wfc_is_constraint_solving_in_the_wild.pdf)
+* [Oskar Stalberg](https://twitter.com/OskSta)
+
 ## Credits and licences
 
 Authors: 
@@ -152,10 +158,5 @@ Authors:
 * [Maciej Kaszlewicz](https://github.com/NaraS91) 
 * [Paweł Kroll](https://github.com/skrroll)
 * [Stefan Radziuk](https://github.com/stefanradziuk)
-
-References:
-* [Maxim Gumin's wave function algorithm](https://github.com/mxgmn/WaveFunctionCollapse)
-* [Isaac Karth and Adam M. Smith research paper](https://adamsmith.as/papers/wfc_is_constraint_solving_in_the_wild.pdf)
-* [Oskar Stalberg](https://twitter.com/OskSta)
 
 Tile art in graphics/rpg_map is Overworld rpg tileset by Tayoko (licensed under [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)) available at [opengameart.org/content/overworld-rpg-tileset](https://opengameart.org/content/overworld-rpg-tileset)
