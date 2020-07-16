@@ -9,6 +9,8 @@ The program determines a bitmap based on the input consisting of smaller tiles (
   <img src="wfc_demo.gif" width="600">
 </p>
 
+## Table of contents
+
 - [Introduction](#introduction)
 - [Local similarity](#local-similarity)
 - [Algorithm](#algorithm)
