@@ -57,6 +57,8 @@ Tile art in graphics/rpg_map is Overworld rpg tileset by Tayoko (licensed under 
 ### Input
 
 The input consists of several files separeted into two groups: constraints and images. 
+
+#### Constraints 
 Constrains is a single .xml file formatted as the following example:
 
 ```xml
@@ -105,4 +107,5 @@ Constrains is a single .xml file formatted as the following example:
   <constraint file="telephone.png" x="3" y ="9"/>
   
 </tiles>
-
+```
+#### Images
