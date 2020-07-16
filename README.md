@@ -23,13 +23,13 @@ The program determines a bitmap based on the input consisting of smaller tiles (
 
 ## Introduction
 
-The name of the algorithm stems from the Quantum Mechanics, where it refers to a [behaviour](https://en.wikipedia.org/wiki/Wave_function_collapse) of miniscule particles which gradaully determies their position in space. Similair in a broad sense, WaveFunctionCollapse (WFC) determies the orientation and coordinates of input tiles based on initial constraints. Let us consider a simplified example:
+The name of the algorithm stems from the Quantum Mechanics, where it refers to a [behaviour](https://en.wikipedia.org/wiki/Wave_function_collapse) of minuscule particles which gradually determines their position in space. Similar in a broad sense, WaveFunctionCollapse (WFC) determines the orientation and coordinates of input tiles based on initial constraints. Let us consider a simplified example:
 
-1. The bitmap consist of two spaces for tiles, which can be occupied by any of the four tiles with equal propabilities. The *entropy* of each space is 4 now. In our model, the algothim will always choose the minium *non-zero* entropy space and then choose randomly.
+1. The bitmap consists of two spaces for tiles, which can be occupied by any of the four tiles with equal probabilities. The *entropy* of each space is 4 now. In our model, the algorithm will always choose the minimum *not-equal-to-one* entropy space and then choose randomly.
 
-2. Let us say that the right space was chosen with a head occupying it. Now only straigt and tail tiles stisfy the neighbourhood rules. The choice of the head tile *propagates* itself throughout the grid.
+2. Let us say that the right space was chosen with a head occupying it. Now only straight and tail tiles satisfy the neighbourhood rules. The choice of the head tile *propagates* itself throughout the grid.
 
-3. Tail is chosen at random. Valid image is determined, collapse terminates.
+3. The tail is chosen at random. Valid image is determined, collapse terminates.
 
 <p align="center">
   <img src="CollapseOfWF.png" width="100%">
@@ -41,7 +41,7 @@ This execution principle is extended for custom tilesets and sizes of grids. Hav
   <img src="QTR.png" width="80%">
 </p>
 
-As you can probably spot, tiles can be rotated and flipped, the grid does not have to be a squre, any rectangular shape can be specified. 
+As you can probably spot, tiles can be rotated and flipped, the grid does not have to be a square, any rectangular shape can be specified.  
 
 ## Local similarity
 
@@ -53,7 +53,7 @@ This means in principle that:
 
 ### Input
 
-The input consists of several files separeted into two groups: **constraints and images**. 
+The input consists of several files separated into two groups: **constraints and images**. 
 
 #### Constraints 
 Constrains is a single .xml file formatted as the following example:
@@ -96,7 +96,7 @@ Constrains is a single .xml file formatted as the following example:
   <tile file="qtr_dome.png" top="qtr_2" right="qtr_dome" bottom="qtr_1" left="sky" flip="2"/>
   <tile file="qtr_spire.png" top = "sky" right="qtr_spire" bottom ="qtr_2" left="sky" flip="2" rotate = "1"/>
 
-  <!-- optional constrains that set grid space to a particular tile type
+  <!-- optional constraints that set grid space to a particular tile type
     file = name of the file
     x/y - coordinates of the space (origin is upper left!)
     -->
@@ -107,16 +107,16 @@ Constrains is a single .xml file formatted as the following example:
 ```
 #### Images
 
-This is a subdirectory with png files of the same width and height (and all square). See grapics folder in the source.
+This is a subdirectory with png files of the same width and height (and all square). See the graphics folder in the source.
 
 ### Execution
 
 1. Read the input with optional rotations, flips and constraints.
-2. Initialise a 2D array of 64 bitstrings (each bit corresponding to a tile type). True represents that a tile can occupy given space, false - the opposite. We will want all of those to have exactly one bit set. Without specified constraints, all bitstrings will be set to 11111...
+2. Initialise a 2D array of 64 bitstrings (each bit corresponding to a tile type). True represents that a tile can occupy given space, false - the opposite. We will want all of those to have exactly one-bit set. Without specified constraints, all bitstrings will be set to 11111...
 3. Loop:
-  i. Observation: Find elements of minimum entropy greater not equal to 1 (these spaces are already collapsed). If this is positive, go to the next step, otherwise abort (valid solution was not found).
+  i. Observation: Find elements of minimum entropy greater not equal to 1 (these spaces are already collapsed). If this is positive, go to the next step, otherwise, abort (a valid solution was not found).
   ii. Choose the element at random and collapse it (make its entropy 1).
-4. If succesfully terminated, we have a valid image generated. 
+4. If successfully terminated, we have a valid image generated. 
 
 ### Output
 
@@ -128,10 +128,10 @@ We have implemented a live upgrated working of the algorithm. It shows the avera
 
 ## Possible extensions
 
-The current state of the project represents 2 weeks of team work. We are aware that there are multiple aspects which could be inproved, most notably:
+The current state of the project represents 2 weeks of teamwork. We are aware that there are multiple aspects which could be improved, most notably:
 
 * Setting the relative frequency of the tiles
-* Extending the program to more dimentions (3D)
+* Extending the program to more dimensions (3D)
 * Providing an interactive interface for users
 * Adding more tilesets
 
