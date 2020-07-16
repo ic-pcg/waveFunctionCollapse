@@ -10,7 +10,8 @@ The program determines a bitmap based on the input consisting of smaller tiles (
   <img src="wfc_demo.gif" width="600">
 </p>
 
-# Local Similarity
+Local Similarity
+----------------
 
 Authors: [Łukasz Jakubowski](https://github.com/woocashh), [Maciej Kaszlewicz](https://github.com/NaraS91), [Paweł Kroll](https://github.com/skrroll), [Stefan Radziuk](https://github.com/stefanradziuk)
 
