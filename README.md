@@ -56,3 +56,53 @@ Tile art in graphics/rpg_map is Overworld rpg tileset by Tayoko (licensed under 
 
 ### Input
 
+The input consists of several files separeted into two groups: constraints and images. 
+Constrains is a single .xml file formatted as the following example:
+
+```xml
+<!-- dir = path_to_directory_with_png_files 
+     size_x = width
+     size_y = height
+     -->
+
+<tiles dir="./graphics/huxley_tiles/" size_x="10" size_y="10">
+  
+  <!-- each tile box follows the same pattern -->
+  
+  <!-- neccessary arguments
+        file = name of the file 
+        top/right/bottom/left = string that will be checked for equality, tiles with equal 
+          values can be placed next to each other
+        -->
+  
+  <!-- optional arguments -->
+  
+  <!-- flip: 
+    1 - add a vertically flipped tile to the tileset
+    2 - add a horizontally flipped tile
+    3 - add both of the flips
+    -->
+  
+  <!-- rotate:
+    1 - 90 degrees
+    2 - 180 degrees
+    3 - 270 degrees
+    -->
+  
+  <tile file="sky.png" top="sky" right="sky" bottom="sky" left="sky"/>
+
+  <tile file="qtr_base.png" top="qtr" right="qtr_base" bottom="pavement" left="sky" flip="2"/>
+  <tile file="qtr_balcony.png" top="qtr" right="qtr_balcony" bottom="qtr" left="sky" flip="2"/>
+  <tile file="qtr_top_balcony.png" top="qtr_1" right="qtr_top_balcony" bottom="qtr" left="sky" flip="2"/>
+  <tile file="qtr_dome.png" top="qtr_2" right="qtr_dome" bottom="qtr_1" left="sky" flip="2"/>
+  <tile file="qtr_spire.png" top = "sky" right="qtr_spire" bottom ="qtr_2" left="sky" flip="2" rotate = "1"/>
+
+  <!-- optional constrains that set grid space to a particular tile type
+    file = name of the file
+    x/y - coordinates of the space (origin is upper left!)
+    -->
+  
+  <constraint file="telephone.png" x="3" y ="9"/>
+  
+</tiles>
+
