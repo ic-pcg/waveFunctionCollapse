@@ -32,7 +32,7 @@ The name of the algorithm stems from the Quantum Mechanics, where it refers to a
 3. Tail is chosen at random. Valid image is determined, collapse terminates.
 
 <p align="center">
-  <img src="CollapseOfWF.gif" width="600">
+  <img src="CollapseOfWF.png" width="80%">
 </p>
 
 
