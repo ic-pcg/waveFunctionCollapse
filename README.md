@@ -114,7 +114,9 @@ This is a subdirectory with png files of the same width and height (and all squa
 1. Read the input with optional rotations, flips and constraints.
 2. Initialise a 2D array of 64 bitstrings (each bit corresponding to a tile type). True represents that a tile can occupy given space, false - the opposite. We will want all of those to have exactly one-bit set. Without specified constraints, all bitstrings will be set to 11111...
 3. Loop:
+
   i. Observation: Find elements of minimum entropy greater not equal to 1 (these spaces are already collapsed). If this is positive, go to the next step, otherwise, abort (a valid solution was not found).
+  
   ii. Choose the element at random and collapse it (make its entropy 1).
   
 4. If successfully terminated, we have a valid image generated. 
