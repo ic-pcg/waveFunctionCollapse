@@ -138,6 +138,10 @@ The current state of the project represents 2 weeks of team work. We are aware t
 If you feel like you would like to contribute, please do not hesitate to [message us](https://www.linkedin.com/in/lukasz-jakubowski-2b0a28161/).
 We can gladly provide you with expertise and cooperation!
 
+## Documentation
+
+The official report is available [here](Report.pdf), please jump straight to section 3 for relevant information.
+
 ## Credits and licences
 
 Authors: 
@@ -152,6 +156,3 @@ References:
 * [Oskar Stalberg](https://twitter.com/OskSta)
 
 Tile art in graphics/rpg_map is Overworld rpg tileset by Tayoko (licensed under [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)) available at [opengameart.org/content/overworld-rpg-tileset](https://opengameart.org/content/overworld-rpg-tileset)
-
-## Documentation
-
