@@ -148,7 +148,7 @@ Authors:
 
 References:
 * [Maxim Gumin's wave function algorithm](https://github.com/mxgmn/WaveFunctionCollapse)
-* [Isaac Karth and Adam M. Smith research paper] (https://adamsmith.as/papers/wfc_is_constraint_solving_in_the_wild.pdf)
+* [Isaac Karth and Adam M. Smith research paper](https://adamsmith.as/papers/wfc_is_constraint_solving_in_the_wild.pdf)
 * [Oskar Stalberg](https://twitter.com/OskSta)
 
 Tile art in graphics/rpg_map is Overworld rpg tileset by Tayoko (licensed under [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)) available at [opengameart.org/content/overworld-rpg-tileset](https://opengameart.org/content/overworld-rpg-tileset)
