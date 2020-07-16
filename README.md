@@ -126,6 +126,28 @@ We have implemented a live upgrated working of the algorithm. It shows the avera
   <img src="rpg_2_cut.gif" width="80%">
 </p>
 
-Authors: [Łukasz Jakubowski](https://github.com/woocashh), [Maciej Kaszlewicz](https://github.com/NaraS91), [Paweł Kroll](https://github.com/skrroll), [Stefan Radziuk](https://github.com/stefanradziuk)
+## Possible extensions
+
+The current state of the project represents 2 weeks of team work. We are aware that there are multiple aspects which could be inproved, most notably:
+
+* Setting the relative frequency of the tiles
+* Extending the program to more dimentions (3D)
+* Providing an interactive interface for users
+* Adding more tilesets
+
+If you feel like you would like to contribute, please do not hesitate to [message us](https://www.linkedin.com/in/lukasz-jakubowski-2b0a28161/).
+We can gladly provide you with expertise and cooperation!
+
+## Credits and licences
+
+Authors: 
+* [Łukasz Jakubowski](https://github.com/woocashh) 
+* [Maciej Kaszlewicz](https://github.com/NaraS91) 
+* [Paweł Kroll](https://github.com/skrroll)
+* [Stefan Radziuk](https://github.com/stefanradziuk)
+
+References:
+* [Maxim Gumin's wave function algorithm](https://github.com/mxgmn/WaveFunctionCollapse)
+* [] (https://adamsmith.as/papers/wfc_is_constraint_solving_in_the_wild.pdf)
 
 Tile art in graphics/rpg_map is Overworld rpg tileset by Tayoko (licensed under [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)) available at [opengameart.org/content/overworld-rpg-tileset](https://opengameart.org/content/overworld-rpg-tileset)
