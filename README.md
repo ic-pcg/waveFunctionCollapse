@@ -14,7 +14,6 @@ The program determines a bitmap based on the input consisting of smaller tiles (
 - [Introduction](#introduction)
 - [Local similarity](#local-similarity)
 - [Algorithm](#algorithm)
-- [Example inputs and outputs](#example-inputs-and-outpus)
 - [Possible extensions](#possible-extensions)
 - [References](#references)
 - [Credits and licences](#credits-and-licences)
@@ -52,3 +51,8 @@ This means in principe that:
 Authors: [Łukasz Jakubowski](https://github.com/woocashh), [Maciej Kaszlewicz](https://github.com/NaraS91), [Paweł Kroll](https://github.com/skrroll), [Stefan Radziuk](https://github.com/stefanradziuk)
 
 Tile art in graphics/rpg_map is Overworld rpg tileset by Tayoko (licensed under [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)) available at [opengameart.org/content/overworld-rpg-tileset](https://opengameart.org/content/overworld-rpg-tileset)
+
+## Algorithm
+
+### Input
+
