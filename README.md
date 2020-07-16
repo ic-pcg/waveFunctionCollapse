@@ -120,7 +120,11 @@ This is a subdirectory with png files of the same width and height (and all squa
 
 ### Output
 
-We have implemented a live upgrated to the working of the algorithm. It shows the average of pixel colours of each tile possible in an element.
+We have implemented a live upgrated working of the algorithm. It shows the average of pixel colours of each tile possible in an element. Here is an example:
+
+<p align="center">
+  <img src="rpg_2_cut.gif" width="80%">
+</p>
 
 Authors: [Łukasz Jakubowski](https://github.com/woocashh), [Maciej Kaszlewicz](https://github.com/NaraS91), [Paweł Kroll](https://github.com/skrroll), [Stefan Radziuk](https://github.com/stefanradziuk)
 
