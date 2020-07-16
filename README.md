@@ -9,6 +9,7 @@ The program determines a bitmap based on the input consisting of smaller tiles (
   <img src="wfc_demo.gif" width="600">
 </p>
 
+
 ## Table of contents
 
 - [Introduction](#introduction)
@@ -18,7 +19,7 @@ The program determines a bitmap based on the input consisting of smaller tiles (
 - [References](#references)
 - [Credits and licences](#credits-and-licences)
 - [Documentation](#documentation)
-----------------------------------------
+
 
 ## Introduction
 
@@ -44,19 +45,15 @@ As you can probably spot, tiles can be rotated and flipped, the grid does not ha
 
 ## Local similarity
 
-This means in principe that:
+This means in principle that:
 
 > Tiles from the tileset built up the image (ideally all tile types are present in the image at least once, subject to constraints).
-
-Authors: [Łukasz Jakubowski](https://github.com/woocashh), [Maciej Kaszlewicz](https://github.com/NaraS91), [Paweł Kroll](https://github.com/skrroll), [Stefan Radziuk](https://github.com/stefanradziuk)
-
-Tile art in graphics/rpg_map is Overworld rpg tileset by Tayoko (licensed under [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)) available at [opengameart.org/content/overworld-rpg-tileset](https://opengameart.org/content/overworld-rpg-tileset)
 
 ## Algorithm
 
 ### Input
 
-The input consists of several files separeted into two groups: constraints and images. 
+The input consists of several files separeted into two groups: **constraints and images**. 
 
 #### Constraints 
 Constrains is a single .xml file formatted as the following example:
@@ -109,3 +106,22 @@ Constrains is a single .xml file formatted as the following example:
 </tiles>
 ```
 #### Images
+
+This is a subdirectory with png files of the same width and height (and all square). See grapics folder in the source.
+
+### Execution
+
+1. Read the input with optional rotations, flips and constraints.
+2. Initialise a 2D array of 64 bitstrings (each bit corresponding to a tile type). True represents that a tile can occupy given space, false - the opposite. We will want all of those to have exactly one bit set. Without specified constraints, all bitstrings will be set to 11111...
+3. Loop:
+  i. Observation: Find elements of minimum entropy greater not equal to 1 (these spaces are already collapsed). If this is positive, go to the next step, otherwise abort (valid solution was not found).
+  ii. Choose the element at random and collapse it (make its entropy 1).
+4. If succesfully terminated, we have a valid image generated. 
+
+### Output
+
+We have implemented a live upgrated to the working of the algorithm. It shows the average of pixel colours of each tile possible in an element.
+
+Authors: [Łukasz Jakubowski](https://github.com/woocashh), [Maciej Kaszlewicz](https://github.com/NaraS91), [Paweł Kroll](https://github.com/skrroll), [Stefan Radziuk](https://github.com/stefanradziuk)
+
+Tile art in graphics/rpg_map is Overworld rpg tileset by Tayoko (licensed under [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)) available at [opengameart.org/content/overworld-rpg-tileset](https://opengameart.org/content/overworld-rpg-tileset)
