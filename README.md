@@ -218,4 +218,6 @@ Authors:
 * [Paweł Kroll](https://github.com/skrroll)
 * [Stefan Radziuk](https://github.com/stefanradziuk)
 
-Tile art in graphics/rpg\_map is Overworld rpg tileset by Tayoko (licensed under [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)) available at [opengameart.org/content/overworld-rpg-tileset](https://opengameart.org/content/overworld-rpg-tileset)
+This project is licensed under the terms of the MIT license, excluding the files listed below:
+
+Tile art in `graphics/rpg\_map` is Overworld rpg tileset by Tayoko (licensed under [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)) available at [opengameart.org/content/overworld-rpg-tileset](https://opengameart.org/content/overworld-rpg-tileset)
