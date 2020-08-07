@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <unistd.h>
 
 #include "graphics/drawingTiles.h"
 #include "graphics/graphicsRunner.h"
@@ -92,6 +93,7 @@ int main(int argc, char** argv) {
   // check if valid solution found
   if (wfcReturnValue) {
     printf("WFC terminated successfully\n");
+    //sleep(10);
     pthread_join(graphics_id, NULL);
 
     int** tileIdMatrix = initialiseTileMatrix(sizeX, sizeY, matrix);
