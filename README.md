@@ -142,6 +142,48 @@ We can gladly provide you with expertise and cooperation!
 
 ## Getting started
 
+Unfortunately, there is currently no support for Windows, if you would like to contribute in this area please message us!
+
+First you will need to install needed libraries in your terminal:
+
+Ubuntu/Linux:
+```shell
+sudo apt-get install libxml2
+sudo apt-get install imagemagick
+```
+macOS:
+
+```shell
+brew install libxml2
+brew install imagemagick && brew link imagemagick --force
+```
+
+Now, the CFLAGS in Makefiles are configured for Ubuntu, please change them on macOS:
+
+--------------
+macOS only:
+
+1) In ./waveFunctionCollapse/Makefile:
+```shell
+CFLAGS= -Wall -O0 -std=c99 -pedantic `pkg-config --cflags --libs MagickWand` -lglut -framework OpenGL -pthread -I/usr/include/libxml2 -lxml2 -g
+```
+2) in ./waveFunctionCollapse/graphics/Makefile:
+```shell
+CFLAGS =  -Wall -O3 -std=c99 -Werror -pedantic -I/usr/local/Cellar/imagemagick/7.0.10-25/include/ImageMagick-7 -pthread -Wno-deprecated-declarations -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16
+```
+
+3) Change first threee includes in ./waveFunctionCollapse/graphics/graphicsRunner.h to 
+
+```shell
+#include <OpenGL/gl.h>
+#include <OpenGL/glu.h>
+#include <GLUT/glut.h>
+```
+
+4) In ./waveFunctionCollapse/run_wfc.c uncomment line 96
+
+-------------
+
 To build the project using Make run:
 ```shell
 make
@@ -153,9 +195,9 @@ Provided make ran successfully, `run_wfc` has been created in the main folder. Y
 ```
 We've set up a few sample tilesets for you to try out:
 ```shell
-./run_wfc sample_inputes/python.xml
-./run_wfc sample_inputes/rpg_map.xml
-./run_wfc sample_inputes/huxley.xml
+./run_wfc sample_inputs/python.xml
+./run_wfc sample_inputs/rpg_map.xml
+./run_wfc sample_inputs/huxley.xml
 ```
 
 ## Documentation
