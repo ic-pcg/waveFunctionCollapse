@@ -220,6 +220,22 @@ void addMiniTile(float** pixels, int currentTile, MagickWand* wand,
                           pixels[currentTile + numOfTiles]);
 }
 
+void saveResultImage(const char* fileName){
+  MagickWandGenesis();
+  MagickWand* wand = NewMagickWand();
+
+  MagickConstituteImage(wand, windowWidth, windowHeight,
+                        "RGB", FloatPixel, (float*) buffer);
+  MagickFlipImage(wand);
+
+  if(MagickWriteImage(wand, fileName) == MagickFalse){
+    printf("could not save the image\n");
+  }
+
+  wand = DestroyMagickWand(wand);
+  MagickWandTerminus();
+}
+
 // not used at the moment
 void addRotatedTile(float** pixels, int currentTile) {
   pixels[currentTile + numOfTiles] =

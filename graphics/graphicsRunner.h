@@ -35,5 +35,6 @@ void initialiseGraphics(Tile** tileTypes, int tiles_length, int window_height,
 void freeGraphicsMemory();
 void* runGraphics(void* mainArguments);
 int integerSqrt(int number);
+void saveResultImage(const char* fileName);
 
 #endif

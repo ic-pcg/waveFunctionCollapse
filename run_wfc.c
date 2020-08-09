@@ -22,6 +22,9 @@
 
 #define SLEEP_NS 5000000
 
+#define SAVE_RESULT_IMAGE true
+#define FILE_NAME "./sample.jpg\0"
+
 // can set the drawing style here, try if you wish
 const DrawingStyle DRAWING_STYLE = AverageColor;
 
@@ -92,6 +95,10 @@ int main(int argc, char** argv) {
 
   // check if valid solution found
   if (wfcReturnValue) {
+    if(SAVE_RESULT_IMAGE){
+      saveResultImage(FILE_NAME);
+    }
+
     printf("WFC terminated successfully\n");
     //sleep(10);
     pthread_join(graphics_id, NULL);
