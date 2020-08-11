@@ -100,7 +100,9 @@ int main(int argc, char** argv) {
     }
 
     printf("WFC terminated successfully\n");
-    //sleep(10);
+    #ifdef __APPLE__
+    sleep(10);
+    #endif
     pthread_join(graphics_id, NULL);
 
     int** tileIdMatrix = initialiseTileMatrix(sizeX, sizeY, matrix);

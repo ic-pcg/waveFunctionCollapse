@@ -1,11 +1,19 @@
 #ifndef GRAPHICSRUNNER_H
 #define GRAPHICSRUNNER_H
 
+#ifdef __APPLE__
+/* Defined before OpenGL and GLUT includes to avoid deprecation messages */
+//#define GL_SILENCE_DEPRECATION
+#include <OpenGL/gl.h>
+#include <OpenGL/glu.h>
+#include <GLUT/glut.h>
+#else
 #include <GL/gl.h>
 #include <GL/glu.h>
 #include <GL/glut.h>
-#include <stdio.h>
+#endif
 
+#include <stdio.h>
 #include "../utils/superposition.h"
 #include "../utils/tiles.h"
 #include "drawingTiles.h"
