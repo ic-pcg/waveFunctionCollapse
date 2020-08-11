@@ -1,5 +1,11 @@
+UNAME_S := $(shell uname -s)
 CC       = gcc
-CFLAGS   = -Wall -O0 -std=c99 -pedantic `pkg-config --cflags --libs MagickWand` -lglut -lGL -pthread -I/usr/include/libxml2 -lxml2 -g
+ifeq ($(UNAME_S), Linux) #LINUX
+	CFLAGS = -Wall -O0 -std=c99 -pedantic `pkg-config --cflags --libs MagickWand` -lglut -lGL -pthread -I/usr/include/libxml2 -lxml2 -g
+endif
+ifeq ($(UNAME_S), Darwin) #APPLE
+	CFLAGS = -Wall -O0 -std=c99 -pedantic `pkg-config --cflags --libs MagickWand` -pthread -Wno-deprecated-declarations -DMAGICKCORE_QUANTUM_DEPTH=16 -lglut -framework OpenGL -pthread -Wno-unused-command-line-argument -lxml2 -Wno-format
+endif
 BUILD    = run_wfc
 VPATH 	 = utils
 GRAPHICS = graphics/graphicsRunner.o graphics/drawingTiles.o
