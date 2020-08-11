@@ -128,6 +128,8 @@ We have implemented a live updated working of the algorithm. It shows the averag
   <img src="demos/rpg_2_cut.gif" width="80%">
 </p>
 
+**Also** the output will be saved in the ```sample.jpg``` file in the ```/waveFunctionCollapse/``` directory.
+
 ## Possible extensions
 
 The current state of the project represents 2 weeks of teamwork. We are aware that there are multiple aspects which could be improved, most notably:
@@ -146,6 +148,7 @@ Unfortunately, there is currently no support for Windows, if you would like to c
 
 First you will need to install needed libraries in your terminal:
 
+------------
 Ubuntu/Linux:
 ```shell
 sudo apt-get install libxml2
@@ -157,31 +160,6 @@ macOS:
 brew install libxml2
 brew install imagemagick && brew link imagemagick --force
 ```
-
-Now, the CFLAGS in Makefiles are configured for Ubuntu, please change them on macOS:
-
---------------
-macOS only:
-
-1) In ./waveFunctionCollapse/Makefile:
-```shell
-CFLAGS= -Wall -O0 -std=c99 -pedantic `pkg-config --cflags --libs MagickWand` -lglut -framework OpenGL -pthread -I/usr/include/libxml2 -lxml2 -g
-```
-2) in ./waveFunctionCollapse/graphics/Makefile:
-```shell
-CFLAGS =  -Wall -O3 -std=c99 -Werror -pedantic -I/usr/local/Cellar/imagemagick/7.0.10-25/include/ImageMagick-7 -pthread -Wno-deprecated-declarations -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16
-```
-
-3) Change first threee includes in ./waveFunctionCollapse/graphics/graphicsRunner.h to 
-
-```shell
-#include <OpenGL/gl.h>
-#include <OpenGL/glu.h>
-#include <GLUT/glut.h>
-```
-
-4) In ./waveFunctionCollapse/run_wfc.c uncomment line 96
-
 -------------
 
 To build the project using Make run:
