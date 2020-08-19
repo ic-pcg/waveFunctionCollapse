@@ -41,7 +41,7 @@ void parseXml(char* filename, Tile** tileTypes, int* tileTypesLengthPt,
 
   // processing the root arguments: dir, size_x, size_y
   xmlAttr* propertyNode;
-  char* dir = calloc(MAX_DIR_LENGHT, sizeof(char));
+  char* dir = (char*)calloc(MAX_DIR_LENGHT, sizeof(char));
 
   for (propertyNode = root->properties; propertyNode;
        propertyNode = propertyNode->next) {
@@ -68,7 +68,7 @@ void parseXml(char* filename, Tile** tileTypes, int* tileTypesLengthPt,
   firstChild = root->children;
 
   // this structure will translate from edge names to their ids
-  char** edges = calloc(MAX_EDGE_TYPES, sizeof(char*));
+  char** edges = (char**)calloc(MAX_EDGE_TYPES, sizeof(char*));
   int edgesLength = 0;
 
   // temporary directory for rotated and flipped tiles
@@ -84,15 +84,15 @@ void parseXml(char* filename, Tile** tileTypes, int* tileTypesLengthPt,
 
     // creating a list of tiles
     if (!strcmp((const char*)node->name, "tile")) {
-      Tile* tile = calloc(1, sizeof(Tile));
+      Tile* tile = (Tile*)calloc(1, sizeof(Tile));
       tile->id = *tileTypesLengthPt;
-      tile->name = calloc(MAX_NAME_LENGTH, sizeof(char));
+      tile->name = (char*)calloc(MAX_NAME_LENGTH, sizeof(char));
 
       // setting the properties of a tile
       xmlAttr* propertyNode;
       int rotate = 0;
       int flip = 0;
-      char* path = calloc(MAX_DIR_LENGHT, sizeof(char));
+      char* path = (char*)calloc(MAX_DIR_LENGHT, sizeof(char));
 
       for (propertyNode = node->properties; propertyNode;
            propertyNode = propertyNode->next) {
@@ -177,8 +177,8 @@ void parseXml(char* filename, Tile** tileTypes, int* tileTypesLengthPt,
     // processing the constraints
     else if (!strcmp((const char*)node->name, "constraint")) {
       xmlAttr* propertyNode;
-      Constraint* constraint = calloc(1, sizeof(Constraint));
-      constraint->coordinates = calloc(1, sizeof(Coords));
+      Constraint* constraint = (Constraint*)calloc(1, sizeof(Constraint));
+      constraint->coordinates = (Coords*)calloc(1, sizeof(Coords));
 
       for (propertyNode = node->properties; propertyNode;
            propertyNode = propertyNode->next) {

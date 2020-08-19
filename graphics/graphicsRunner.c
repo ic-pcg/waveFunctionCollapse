@@ -67,7 +67,7 @@ void initialiseGraphics(Tile** tile_types, int tiles_length, int window_height,
   populateTiles(tilesAsPixels);
   freePixels(tilesAsPixels);
 
-  buffer = malloc(sizeof(GLfloat) * windowHeight * windowWidth * 3);
+  buffer = (GLfloat*)malloc(sizeof(GLfloat) * windowHeight * windowWidth * 3);
 
   wand = DestroyMagickWand(wand);
   MagickWandTerminus();
@@ -122,7 +122,7 @@ void updateBuffer() {
 
 // converts floats from pixels to GLfloats and put them into tiles array
 void populateTiles(float** pixels) {
-  tiles = malloc(sizeof(GLfloat*) * numOfTiles * tilesRepetition);
+  tiles = (GLfloat**)malloc(sizeof(GLfloat*) * numOfTiles * tilesRepetition);
   int height = tileHeight;
   int width = tileWidth;
   for (int i = 0; i < numOfTiles * tilesRepetition; i++) {
@@ -131,7 +131,7 @@ void populateTiles(float** pixels) {
       height = tileHeight / miniTilesInRow;
       width = tileWidth / miniTilesInRow;
     }
-    tiles[i] = malloc(sizeof(GLfloat) * 3 * width * height);
+    tiles[i] = (GLfloat*)malloc(sizeof(GLfloat) * 3 * width * height);
     for (int j = 0; j < height; j++) {
       for (int k = 0; k < width; k++) {
         int pos = j * width * 3 + k * 3;
@@ -179,7 +179,8 @@ int integerSqrt(int number) {
 float** TilesToPixels(MagickWand* wand) {
   MagickResetIterator(wand);
   MagickNextImage(wand);
-  float** pixels = malloc(numOfTiles * sizeof(float*) * tilesRepetition);
+  float** pixels =
+      (float**)malloc(numOfTiles * sizeof(float*) * tilesRepetition);
 
   assert(numOfTiles > 0);
   int miniTilesInRow = integerSqrt(numOfTiles);
@@ -190,7 +191,7 @@ float** TilesToPixels(MagickWand* wand) {
       MagickResizeImage(wand, tileWidth, tileHeight, BoxFilter);
     }
 
-    pixels[i] = malloc(sizeof(float) * tileHeight * tileWidth * 3);
+    pixels[i] = (float*)malloc(sizeof(float) * tileHeight * tileWidth * 3);
     MagickExportImagePixels(wand, 0, 0, tileWidth, tileHeight, "RGB",
                             FloatPixel, pixels[i]);
 
@@ -215,20 +216,20 @@ void addMiniTile(float** pixels, int currentTile, MagickWand* wand,
   MagickResizeImage(wand, newWidth, newHeight, BoxFilter);
 
   pixels[currentTile + numOfTiles] =
-      malloc(sizeof(float) * newWidth * newHeight * 3);
+      (float*)malloc(sizeof(float) * newWidth * newHeight * 3);
   MagickExportImagePixels(wand, 0, 0, newWidth, newHeight, "RGB", FloatPixel,
                           pixels[currentTile + numOfTiles]);
 }
 
-void saveResultImage(const char* fileName){
+void saveResultImage(const char* fileName) {
   MagickWandGenesis();
   MagickWand* wand = NewMagickWand();
 
-  MagickConstituteImage(wand, windowWidth, windowHeight,
-                        "RGB", FloatPixel, (float*) buffer);
+  MagickConstituteImage(wand, windowWidth, windowHeight, "RGB", FloatPixel,
+                        (float*)buffer);
   MagickFlipImage(wand);
 
-  if(MagickWriteImage(wand, fileName) == MagickFalse){
+  if (MagickWriteImage(wand, fileName) == MagickFalse) {
     printf("could not save the image\n");
   }
 
@@ -239,11 +240,11 @@ void saveResultImage(const char* fileName){
 // not used at the moment
 void addRotatedTile(float** pixels, int currentTile) {
   pixels[currentTile + numOfTiles] =
-      malloc(sizeof(float) * tileHeight * tileWidth * 3);
+      (float*)malloc(sizeof(float) * tileHeight * tileWidth * 3);
   pixels[currentTile + numOfTiles * 2] =
-      malloc(sizeof(float) * tileHeight * tileWidth * 3);
+      (float*)malloc(sizeof(float) * tileHeight * tileWidth * 3);
   pixels[currentTile + numOfTiles * 3] =
-      malloc(sizeof(float) * tileHeight * tileWidth * 3);
+      (float*)malloc(sizeof(float) * tileHeight * tileWidth * 3);
 
   for (int i = 0; i < tileHeight; i++) {
     for (int j = 0; j < tileWidth; j++) {

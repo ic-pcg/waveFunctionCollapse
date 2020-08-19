@@ -8,14 +8,14 @@
 
 int **initialiseTileMatrix(unsigned int sizeX, unsigned int sizeY,
                            Superposition **superpositionMatrix) {
-  int **matrix = calloc(sizeY, sizeof(int *));
+  int **matrix = (int **)calloc(sizeY, sizeof(int *));
 
   if (matrix == NULL) {
     fprintf(stderr, "Not enough memory to allocate the matrix\n");
     exit(EXIT_FAILURE);
   }
 
-  matrix[0] = calloc(sizeX * sizeY, sizeof(int));
+  matrix[0] = (int *)calloc(sizeX * sizeY, sizeof(int));
 
   if (matrix[0] == NULL) {
     free(matrix);
@@ -60,14 +60,15 @@ void printTileMatrix(int **matrix, unsigned int sizeX, unsigned int sizeY) {
 Superposition **initialiseSuperpositionMatrix(unsigned int sizeX,
                                               unsigned int sizeY,
                                               int tileKinds) {
-  Superposition **matrix = calloc(sizeY, sizeof(Superposition *));
+  Superposition **matrix =
+      (Superposition **)calloc(sizeY, sizeof(Superposition *));
 
   if (matrix == NULL) {
     fprintf(stderr, "Not enough memory to allocate the matrix\n");
     exit(EXIT_FAILURE);
   }
 
-  matrix[0] = calloc(sizeX * sizeY, sizeof(Superposition));
+  matrix[0] = (Superposition *)calloc(sizeX * sizeY, sizeof(Superposition));
 
   if (matrix[0] == NULL) {
     free(matrix);

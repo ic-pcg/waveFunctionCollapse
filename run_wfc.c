@@ -38,11 +38,12 @@ int main(int argc, char** argv) {
   }
 
   char* filename = argv[1];
-  Tile** tileTypes = calloc(MAX_TILE_TYPES, sizeof(Tile*));
+  Tile** tileTypes = (Tile**)calloc(MAX_TILE_TYPES, sizeof(Tile*));
   int tileTypesLength = 0;
   int sizeX = 0;
   int sizeY = 0;
-  Constraint** constraints = calloc(MAX_CONSTRAINTS, sizeof(Constraint));
+  Constraint** constraints =
+      (Constraint**)calloc(MAX_CONSTRAINTS, sizeof(Constraint));
   int constraintsLength = 0;
 
   // interpreting the input
@@ -95,14 +96,14 @@ int main(int argc, char** argv) {
 
   // check if valid solution found
   if (wfcReturnValue) {
-    if(SAVE_RESULT_IMAGE){
+    if (SAVE_RESULT_IMAGE) {
       saveResultImage(FILE_NAME);
     }
 
     printf("WFC terminated successfully\n");
-    #ifdef __APPLE__
+#ifdef __APPLE__
     sleep(10);
-    #endif
+#endif
     pthread_join(graphics_id, NULL);
 
     int** tileIdMatrix = initialiseTileMatrix(sizeX, sizeY, matrix);
