@@ -91,7 +91,7 @@ static Coords findMinimumEntropy(Superposition **const matrix,
   // larger than any possible value of entropy
   unsigned int smallestEntropyYet = 1025;
   unsigned int equalFound = 0;
-  Coords *minima = calloc(sizeX * sizeY, sizeof(Coords));
+  Coords *minima = (Coords *)calloc(sizeX * sizeY, sizeof(Coords));
 
   for (int i = 0; i < sizeY; i++) {
     for (int j = 0; j < sizeX; j++) {

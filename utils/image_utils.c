@@ -15,9 +15,9 @@
 // rotateId = 3 rotation by 270 degrees
 
 Tile* rotateTile(Tile* tile, int rotateId, int id, char* path) {
-  Tile* newTile = calloc(1, sizeof(Tile));
+  Tile* newTile = (Tile*)calloc(1, sizeof(Tile));
   newTile->id = id;
-  newTile->name = calloc(MAX_NAME_LENGTH, sizeof(char));
+  newTile->name = (char*)calloc(MAX_NAME_LENGTH, sizeof(char));
   strcpy(newTile->name, tile->name);
 
   char out[1000] = OUT_DIR;
@@ -61,9 +61,9 @@ Tile* rotateTile(Tile* tile, int rotateId, int id, char* path) {
 // flipId = 3 both
 
 Tile* flipTile(Tile* tile, int flipId, int id, char* path) {
-  Tile* newTile = calloc(1, sizeof(Tile));
+  Tile* newTile = (Tile*)calloc(1, sizeof(Tile));
   newTile->id = id;
-  newTile->name = calloc(MAX_NAME_LENGTH, sizeof(char));
+  newTile->name = (char*)calloc(MAX_NAME_LENGTH, sizeof(char));
   strcpy(newTile->name, tile->name);
 
   char out[1000] = OUT_DIR;
