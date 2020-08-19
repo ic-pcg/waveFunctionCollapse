@@ -23,9 +23,9 @@
 #define SLEEP_NS 5000000
 
 #define SAVE_RESULT_IMAGE true
-#define FILE_NAME "./sample.jpg\0"
+#define FILE_NAME "./output.jpg\0"
 
-// can set the drawing style here, try if you wish
+// sets the drawing style (AverageColor | TilesMatrix)
 const DrawingStyle DRAWING_STYLE = AverageColor;
 
 static void* wfcWrapper(void* void_arguments);

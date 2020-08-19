@@ -128,7 +128,7 @@ We have implemented a live updated working of the algorithm. It shows the averag
   <img src="demos/rpg_2_cut.gif" width="80%">
 </p>
 
-**Also** the output will be saved in the ```sample.jpg``` file in the ```/waveFunctionCollapse/``` directory.
+**Also** the output will be saved as an image in the ```output.jpg``` file in the root directory.
 
 ## Possible extensions
 
@@ -139,8 +139,8 @@ The current state of the project represents 2 weeks of teamwork. We are aware th
 * Providing an interactive interface for users
 * Adding more tilesets
 
-If you feel like you would like to contribute, please do not hesitate to [message us](https://www.linkedin.com/in/lukasz-jakubowski-2b0a28161/).
-We can gladly provide you with expertise and cooperation!
+If you feel like you would like to contribute, please do not hesitate to [message us](https://www.linkedin.com/in/lukasz-jakubowski-2b0a28161/) or [submit a pull request](https://github.com/ic-pcg/waveFunctionCollapse/pulls).
+We will gladly provide you with expertise and cooperation!
 
 ## Getting started
 
